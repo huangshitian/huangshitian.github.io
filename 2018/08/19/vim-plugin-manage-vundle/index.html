@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="This will become a reality."/>
+  <meta name="description" content="vim插件管理 Vundle"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://blog.tianges.com/archives/2018/08/"/>
+<link rel="canonical" href="http://blog.tianges.com/2018/08/19/vim-plugin-manage-vundle/"/>
 
 
 
@@ -89,11 +89,7 @@
   window.config = {"title":"space","subtitle":"hacker","description":"This will become a reality.","author":"huangshitian","language":"zh-cn","timezone":"Asia/Shanghai","url":"http://blog.tianges.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":"README.md","new_post_name":":title.md","default_layout":"draft","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":{"github":"https://github.com/huangshitian/huangshitian.github.io.git"},"branch":"master"},"ignore":[],"keywords":"hacker it java technology","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2015,"favicon":"/favicon.ico","rss":"default","menu":{"Home":"/","Categories":"/categories","Tags":"/tags","Archives":"/archives/","About":"/about"},"color":"Default","toc":true,"fancybox":true,"pjax":true,"copyright":{"enable":true,"license":"<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>"},"reward":{"enable":false,"qrCode":{"wechat":null,"alipay":null}},"social":{"email":"your@email.com","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/ahonn","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"leancloud":{"app_id":null,"app_key":null},"baidu_analytics":null,"baidu_verification":null,"google_analytics":null,"google_verification":null,"disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":null,"version":"2.9.0"};
 </script>
 
-    <title>
-  
-    归档 - space
-  
-</title>
+    <title> vim插件管理 Vundle - space </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -223,75 +219,115 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          vim插件管理 Vundle
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-19
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Install-Vundle-and-Vundle-commands"><span class="toc-text">Install Vundle and Vundle commands</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commands"><span class="toc-text">Commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cmd-line"><span class="toc-text">cmd-line</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#config-Plugin-And-add-Plugin"><span class="toc-text">config Plugin And add Plugin</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+
+    <div class="post-content">
+      
+        <h1 id="Install-Vundle-and-Vundle-commands"><a href="#Install-Vundle-and-Vundle-commands" class="headerlink" title="Install Vundle and Vundle commands"></a>Install Vundle and Vundle commands</h1><h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><pre><code>First you must have vim and git software.
+
+* git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+* add config to top of ~/.vimrc
+
+`
+    see the website: https://github.com/VundleVim/Vundle.vim
+`
+</code></pre><h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p>:PluginInstall     安装命令<br>:PluginInstall!    重新安装所有插件<br>:bdelete        deleteBuffer<br>:PluginSearch    查找插件<br>:PluginSearch!    强制刷新本地缓存列表，进行查找<br>:PluginList        查看所有已安装的插件<br>:PluginUpdate    更新插件<br>:PluginClean    清除无效的插件</p>
+<h2 id="cmd-line"><a href="#cmd-line" class="headerlink" title="cmd-line"></a>cmd-line</h2><p>vim +PluginInstall +gall</p>
+<h2 id="config-Plugin-And-add-Plugin"><a href="#config-Plugin-And-add-Plugin" class="headerlink" title="config Plugin And add Plugin"></a>config Plugin And add Plugin</h2><p>add plugin config between “call vundle#begin” and “call vundle#end()”</p>
+<p>Plugin in github repository.</p>
+<p>example: <code>Plugin    &#39;tpope/vim-fugitive&#39;</code></p>
+<p>not in github need full url</p>
+<p>example: <code>Plugin &#39;git://git.wincent.com/command-t.git&#39;</code></p>
+
+      
+    </div>
+
     
       
-        <div class="archive-title">
-          <span class="archive-post-counter">
-            目前共计 2 篇日志
-          </span>
-        </div>
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://blog.tianges.com">huangshitian</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://blog.tianges.com/2018/08/19/vim-plugin-manage-vundle/">http://blog.tianges.com/2018/08/19/vim-plugin-manage-vundle/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
       
     
 
     
-      
+      <footer class="post-footer">
         
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2018</h2>
+          <div class="post-tags">
+            
+              <a href="/tags/vim/">vim</a>
+            
           </div>
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/19/vim-plugin-manage-vundle/" class="archive-post-link">
-            vim插件管理 Vundle
-          </a>
-        </span>
-      </div>
-    
-      
         
         
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/19/index/" class="archive-post-link">
-            index
-          </a>
-        </span>
-      </div>
+  <nav class="post-nav">
     
-  </section>
-
-  
-  <nav class="pagination">
     
+      <a class="next" href="/2018/08/19/index/">
+        <span class="next-text nav-default">index</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
@@ -375,6 +411,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     
